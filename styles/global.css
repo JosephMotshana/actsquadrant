@@ -1,0 +1,88 @@
+/* Full-width dark blue bar */
+.navbar {
+  background-color: #0a1d2e; /* Navy blue from the image */
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Centered container inside the bar */
+.navbar-content {
+  display: flex;
+  justify-content: space-between; /* Pushes Logo left, Links right */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Adjust based on your design preference */
+  margin: 0 auto;     /* This is what keeps it centered */
+  padding: 0 30px;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* Mobile Hamburger Styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    right: -100%;
+    top: 90px;
+    flex-direction: column;
+    background-color: #0a1d2e;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding-top: 50px;
+    transition: 0.4s;
+  }
+
+  .nav-links.mobile-open {
+    right: 0;
+  }
+
+  /* Hamburger to X animation */
+  .bar.open:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .bar.open:nth-child(2) { opacity: 0; }
+  .bar.open:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
