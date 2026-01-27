@@ -28,7 +28,7 @@ function Navbar() {
           <li><Link to="/services" onClick={closeMenu}>SERVICES</Link></li>
           <li><Link to="/contact" onClick={closeMenu}>CONNECT</Link></li>
         </ul>
-
+        
       </div>
     </nav>
   );
