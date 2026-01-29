@@ -29,12 +29,14 @@ const Services = () => {
             <div className="square-box">
               <h3>Web Development</h3>
               <br></br>
+              <br>    </br>
               <p>Custom-built websites and web applications using modern, future-ready technologies tailored to your needs.</p>
             </div>
 
             <div className="square-box">
               <h3>APP Development</h3>
-              <br></br>
+              <br>
+              </br>
               <p>We build custom mobile applications for iOS and Android platforms, designed to deliver seamless user experiences and robust functionality.</p>
             </div>
 
