@@ -15,7 +15,7 @@ const Home = () => {
         <div className="hero-text">
           <small className="welcome-text">Welcome To</small>
           <h1>  
-          
+    
             ACTS quadrant<br />
           <br />
             ‟We Build <br />

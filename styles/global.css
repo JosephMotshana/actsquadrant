@@ -91,6 +91,11 @@
   border-radius: 2px;
   transition: 0.3s;
 }
+.welcome-text {
+  display: block;          /* visible on desktop */
+  text-align: center;
+  width: 100%;
+}
 
 /* 5. Mobile Responsiveness */
 @media (max-width: 768px) {
@@ -154,6 +159,7 @@ html, body {
 .hero {
   position: relative;
   width: 100%;
+   padding-top: 120px;
   height: 100vh;
   overflow: hidden;
 }
@@ -244,6 +250,7 @@ html, body {
   transform: translateY(-2px);
 }
 
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .hero-content {
@@ -265,3 +272,97 @@ html, body {
 
 }
 
+.services-section {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: block; 
+}
+
+.content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  /* INCREASED padding-top to 180px to lower the content from the navbar */
+  padding: 180px 20px 100px 20px; 
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Changed from center to allow top padding to work better */
+  align-items: center;
+}
+
+.services-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.services-header h2 {
+  display: flex;
+  justify-content: center; /* Horizontally centers the button */
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  padding-bottom: 80px;
+}
+
+.square-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 320px; 
+  height: auto;
+  
+  /* HOVER PREPARATION */
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Smooth movement */
+  cursor: pointer;
+  position: relative;
+}
+
+.cta-wrapper {
+  display: flex;
+  justify-content: center; /* This centers the button horizontally */
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* THE HOVER EFFECT */
+.square-box:hover {
+  transform: translateY(-10px); /* Lifts the box slightly */
+  background: rgba(255, 255, 255, 0.12); /* Brightens background */
+  border-color: rgba(255, 255, 255, 0.4); /* Brightens border */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
+}
+
+/* Optional: Slight text scale on hover */
+.square-box:hover h3 {
+  color: #fff;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .square-box {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Rest of your header and text styles... */
