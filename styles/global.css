@@ -531,3 +531,130 @@ display: flex;
     flex: 1;
   }
 }
+/* --- End of Contact Section Styles --- */
+
+
+/*
+   ABOUT PAGE STYLES
+   */
+
+.about-page {
+  /* Using a gradient overlay to ensure text readability */
+  background: linear-gradient(rgba(11, 22, 34, 0.8), rgba(11, 22, 34, 0.8)), 
+              url("../assets/about.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional: creates a parallax effect */
+  background-repeat: no-repeat;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* INTRO */
+.about-intro {
+  padding: 100px 20px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-intro h1 {
+  font-size: clamp(2.4rem, 5vw, 3rem);
+  margin-bottom: 16px;
+}
+
+
+.about-description {
+  color: #cfd8e3;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* VALUES */
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.value-card {
+  background: transparent;
+  border: 1px solid #fcfcff;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+}
+
+.value-card h3 {
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.value-card p {
+  color: #cfd8e3;
+  line-height: 1.6;
+}
+
+/* 
+   CLIENT SECTION
+   */
+
+.client-section {
+  padding: 80px 20px;
+  background-color: transparent; /* Changed from #0b1622 to see the background */
+  text-align: center;
+}
+
+.section-title {
+  color: white;
+  margin-bottom: 40px;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logo-card {
+  aspect-ratio: 1 / 1;
+  background-color: hsl(0, 0%, 0%);
+  border: 2px solid #f7f7f7;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(78, 98, 243, 0.557);
+}
+
+.client-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.clients-note {
+  margin-top: 30px;
+  color: #cfd8e3;
+  font-size: 0.95rem;
+}
+
+
+.welcome-text {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.5em;
+  opacity: 0.7;
+  margin-bottom: 16px;
+}

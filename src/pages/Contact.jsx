@@ -39,8 +39,8 @@ const Contact = () => {
               </div>
               <br></br>
               <div className="detail-item">
-                <div className="icon-box"><a href="https://linkedin.com/in/your_profile" target="_blank" rel="noopener noreferrer">in</a></div>
-                <a href="https://linkedin.com/in/your_profile" target="_blank" rel="noopener noreferrer" className="contact-link">LinkedIn</a>
+                <div className="icon-box"><a href="https://www.linkedin.com/company/acts-quadrant/" target="_blank" rel="noopener noreferrer">in</a></div>
+                <a href="https://www.linkedin.com/company/acts-quadrant/" target="_blank" rel="noopener noreferrer" className="contact-link">LinkedIn</a>
               </div>
             </div>
           </div>
