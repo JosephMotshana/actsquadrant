@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import servicesBg from "../assets/services.jpeg";
 
 const Services = () => {
@@ -58,9 +59,9 @@ const Services = () => {
 
           <div className="cta-wrapper">
             <br></br>
-            <a href="/contact" className="hero-btn">
-              LET’S WORK ▶
-            </a>
+            <Link to="/contact" className="hero-btn">
+            LET'S WORK ▶
+            </Link>
           </div>
 
         </div>
