@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import heroVideo from "../assets/hero-video.mp4"; // put your video here
 
 const Home = () => {
@@ -28,9 +29,9 @@ const Home = () => {
             secure and future-ready digital solutions.
           </p>
 
-          <a href="/services" className="hero-btn">
-            EXPLORE SERVICES ▶
-          </a>
+          <Link to="/services" className="hero-btn">
+  EXPLORE SERVICES ▶
+</Link>
         </div>
       </div>
     </section>
