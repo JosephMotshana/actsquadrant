@@ -18,9 +18,11 @@ const Services = () => {
           <div className="services-grid">
             {/* Boxes will now expand to fit their text */}
             <div className="square-box">
-              <h3>Web Hosting</h3>
+              <h3>Web Hosting & Domain Registration</h3>
               <br></br>
-              <p>Secure, high-performance hosting solutions with guaranteed uptime and scalability for your business growth.</p>
+              <p>Secure, high-performance hosting solutions with guaranteed uptime and scalability for your business growth.
+                Fast and reliable domain registration with full DNS management and dedicated technical support
+              </p>
             </div>
 
             <div className="square-box">
@@ -30,9 +32,9 @@ const Services = () => {
             </div>
 
             <div className="square-box">
-              <h3>Domain Registration</h3>
+              <h3>APP Development</h3>
               <br></br>
-              <p>Fast and reliable domain registration with full DNS management and dedicated technical support.</p>
+              <p>We build custom mobile applications for iOS and Android platforms, designed to deliver seamless user experiences and robust functionality.</p>
             </div>
 
             <div className="square-box">

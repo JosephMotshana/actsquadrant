@@ -307,7 +307,7 @@ html, body {
 }
 
 .services-header h2 {
-  display: flex;
+display: flex;
   justify-content: center; /* Horizontally centers the button */
   align-items: center;
   width: 100%;
@@ -366,3 +366,168 @@ html, body {
 }
 
 /* Rest of your header and text styles... */
+/* --- Contact Section Styles --- */
+/* --- Contact Section Styles --- */
+.contact-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  /* Add your background image path here */
+  background-image: url('../assets/contacts.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Parallax effect */
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.contact-overlay {
+  /* This darkens the image so your white text is easy to read */
+  background: rgba(0, 0, 0, 0.75); 
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* CLEAR NAVBAR: Increase this if your title is still hidden */
+  padding-top: 140px; 
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column; /* Stacked for mobile */
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Maintain your existing card and link styles below... */
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.icon-box:hover {
+  background: #fff;
+}
+
+.icon-box a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.icon-box:hover a {
+  color: #000;
+}
+
+.contact-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  word-break: break-word; /* Prevents long emails from breaking mobile layout */
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Form Card Styles */
+.form-card {
+  background: #111;
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 1px solid #222;
+  width: 100%;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: #888;
+}
+
+.input-group input, 
+.input-group textarea {
+  width: 100%;
+  padding: 14px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 16px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  background: #f0f0f0;
+}
+
+/* --- Responsive Desktop Layout --- */
+@media (min-width: 992px) {
+  .contact-content {
+    flex-direction: row; /* Side-by-side on desktop */
+    align-items: center;
+  }
+
+  .contact-info-side {
+    flex: 1.2;
+  }
+
+  .form-card {
+    flex: 1;
+  }
+}
