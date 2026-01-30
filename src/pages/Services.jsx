@@ -10,10 +10,9 @@ const Services = () => {
     >
       <div className="content-overlay">
         <div className="services-container">
-          
           <div className="services-header">
             <h2>Our Services</h2>
-            <br></br>
+
           </div>
 
           <div className="services-grid">

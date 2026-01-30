@@ -1,13 +1,29 @@
-/* 1. Global Reset for the Navbar */
+/* ===== 1. GLOBAL RESET (The "No-Sway" Foundation) ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
+
+html, body {
+  width: 100%;
+  /* These two lines stop the horizontal swaying/scrolling */
+  overflow-x: hidden; 
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  background: #0a1a24;
+  color: white;
+}
+
+/* ===== 2. NAVBAR ===== */
 .navbar {
   position: fixed;
-  top: 0;               /* Fixed: added '0' (was 100) to keep it at the very top */
+  top: 0;
   left: 0;
   width: 100%;
   height: 120px; 
   background-color: #1F3B54;
   z-index: 1000;
-  /* Fixed: box-shadow needs coordinates and blur radius */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
   display: flex;
   align-items: center;
@@ -23,36 +39,24 @@
   padding: 0 24px;
 }
 
-/* Container for the logo to ensure it's clickable and centered */
 .logo-link {
   display: flex;
   align-items: center;
   text-decoration: none;
-  height: 100%; /* Spans the height of the navbar content */
+  z-index: 1001;
 }
 
-/* The actual Logo Image */
 .logo {
-  height: 100px;          /* Adjusted to leave breathing room in an 80px nav */
-  width: auto;           /* Maintains aspect ratio */
-  display: block;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  object-fit: contain;   /* Ensures the image isn't stretched */
+  height: 100px;
+  width: auto;
+  transition: transform 0.3s ease;
+  object-fit: contain;
 }
 
-/* Hover Effect: Subtle lift and brightness */
-.logo-link:hover .logo {
-  transform: scale(1.05); /* Slight zoom in */
-  /* Makes the logo pop slightly */
-}
-
-/* 3. Desktop Links */
 .nav-links {
   display: flex;
   list-style: none;
   gap: 32px;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-links a {
@@ -60,137 +64,37 @@
   text-decoration: none;
   color: whitesmoke;
   font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: 0.8px;
   transition: color 0.2s ease;
 }
 
-
-
-
-
-
-
-.nav-links a:hover {
-  color: #4da3ff;      /* Lighter blue for better visibility on dark bg */
-}
-
-/* 4. Hamburger */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.bar {
-  width: 28px;
-  height: 3px;
-  background-color: whitesmoke; /* Changed to white so it shows on dark blue */
-  border-radius: 2px;
-  transition: 0.3s;
-}
-.welcome-text {
-  display: block;          /* visible on desktop */
-  text-align: center;
-  width: 100%;
-}
-
-/* 5. Mobile Responsiveness */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-    z-index: 1001; /* Keeps hamburger above the menu */
-  }
-
-  /* Keep the logo above the sliding menu */
-  .logo-link {
-    z-index: 1001; 
-  }
-
-  .nav-links {
-    position: fixed;
-    /* FIX: Match this to your .navbar height (120px) so it starts BELOW the bar */
-    top: 120px; 
-    left: -100%;
-    flex-direction: column;
-    background-color: #1F3B54; 
-    width: 100%;
-    /* FIX: Subtract the full 120px height from the viewport height */
-    height: calc(100vh - 120px); 
-    padding-top: 40px;
-    gap: 40px;
-    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1000;
-    /* Optional: Add a border to separate nav from menu */
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .nav-links.mobile-open {
-    left: 0;
-  }
-
-  /* Adjust logo size for mobile so it doesn't feel cramped */
-  .logo {
-    height: 80px; 
-  }
-
-  /* Adjust Navbar height for mobile if 120px feels too big on a small screen */
-  /* If you change this, remember to update .nav-links top and height calc! */
-}
-
-/* ===== GLOBAL RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  font-family: 'Inter', sans-serif;
-  background: #0a1a24;
-  color: white;
-}
-
-/* ===== HERO SECTION ===== */
+/* ===== 3. HERO SECTION (Overflow Fixes) ===== */
 .hero {
   position: relative;
   width: 100%;
-   padding-top: 120px;
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden; /* Keeps video from pushing width */
+  padding-top: 120px;
 }
 
-/* Background Video */
 .hero video {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 1;
 }
 
-/* Dark overlay */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(6, 25, 38, 0.95),
-    rgba(6, 25, 38, 0.6),
-    rgba(6, 25, 38, 0.2)
-  );
+  background: linear-gradient(to right, rgba(6, 25, 38, 0.95), rgba(6, 25, 38, 0.6), rgba(6, 25, 38, 0.2));
   z-index: 2;
 }
 
-/* Content container */
 .hero-content {
   position: relative;
   z-index: 3;
@@ -202,459 +106,73 @@ html, body {
   align-items: center;
 }
 
-/* Text block */
-.hero-text {
-  max-width: 600px;
-}
-
-.hero-text small {
-  display: block;
-  letter-spacing: 4px;
-  font-size: 0.75rem;
-  color: #9fb6c3;
-  margin-bottom: 1rem;
-}
-
-.hero-text h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-}
-
-.hero-text p {
-  font-size: 1rem;
-  color: #d4e0e7;
-  margin-bottom: 2rem;
-  max-width: 480px;
-}
-
-/* CTA button */
-.hero-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.9rem 1.6rem;
-  background: white;
-  color: #0a1a24;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  border-radius: 2px;
-  transition: all 0.25s ease;
-}
-
-.hero-btn:hover {
-  background: #e6eef3;
-  transform: translateY(-2px);
-}
-
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .hero-content {
-    justify-content: center;
-    text-align: left;          /* not fully centered */
-    padding: 0 20px;           /* ensures content fits screen */
-  }
-
-  .hero-text {
-    max-width: 100%;
-    margin-left: -10px;        /* pushes text slightly left */
-  }
-
-  .welcome-text {
-  display: block;
-  text-align: center;
-  width: 100%;
-}
-
-}
-
+/* ===== 4. SERVICES GRID (Responsive Fix) ===== */
 .services-section {
   width: 100%;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  display: block; 
-}
-
-.content-overlay {
-  background: rgba(0, 0, 0, 0.7);
-  /* INCREASED padding-top to 180px to lower the content from the navbar */
-  padding: 180px 20px 100px 20px; 
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Changed from center to allow top padding to work better */
-  align-items: center;
-}
-
-.services-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  overflow: hidden;
 }
 
 .services-grid {
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.services-header h2 {
-display: flex;
-  justify-content: center; /* Horizontally centers the button */
-  align-items: center;
-  width: 100%;
-  margin-top: 50px;
-  padding-bottom: 80px;
-}
-
-.square-box {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
-  padding: 40px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 320px; 
-  height: auto;
-  
-  /* HOVER PREPARATION */
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Smooth movement */
-  cursor: pointer;
-  position: relative;
-}
-
-.cta-wrapper {
-  display: flex;
-  justify-content: center; /* This centers the button horizontally */
-  align-items: center;
-  width: 100%;
-  margin-top: 50px;
-  padding-bottom: 50px;
-}
-
-/* THE HOVER EFFECT */
-.square-box:hover {
-  transform: translateY(-10px); /* Lifts the box slightly */
-  background: rgba(255, 255, 255, 0.12); /* Brightens background */
-  border-color: rgba(255, 255, 255, 0.4); /* Brightens border */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
-}
-
-/* Optional: Slight text scale on hover */
-.square-box:hover h3 {
-  color: #fff;
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-
-@media (min-width: 1024px) {
-  .square-box {
-    aspect-ratio: 1 / 1;
-  }
-}
-
-/* Rest of your header and text styles... */
-/* --- Contact Section Styles --- */
-/* --- Contact Section Styles --- */
-.contact-wrapper {
-  width: 100%;
-  min-height: 100vh;
-  /* Add your background image path here */
-  background-image: url('../assets/contacts.png'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Parallax effect */
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.contact-overlay {
-  /* This darkens the image so your white text is easy to read */
-  background: rgba(0, 0, 0, 0.75); 
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* CLEAR NAVBAR: Increase this if your title is still hidden */
-  padding-top: 140px; 
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.contact-content {
-  display: flex;
-  flex-direction: column; /* Stacked for mobile */
-  gap: 60px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Maintain your existing card and link styles below... */
-
-.detail-item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.icon-box {
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-.icon-box:hover {
-  background: #fff;
-}
-
-.icon-box a {
-  text-decoration: none;
-  font-size: 1.3rem;
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-.icon-box:hover a {
-  color: #000;
-}
-
-.contact-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  word-break: break-word; /* Prevents long emails from breaking mobile layout */
-}
-
-.contact-link:hover {
-  text-decoration: underline;
-}
-
-/* Form Card Styles */
-.form-card {
-  background: #111;
-  padding: 40px 30px;
-  border-radius: 20px;
-  border: 1px solid #222;
+  /* Reduced min-width to 280px to fit smaller phones */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   width: 100%;
 }
 
-.form-title {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-}
-
-.input-group {
-  margin-bottom: 20px;
-}
-
-.input-group label {
-  display: block;
-  font-size: 0.9rem;
-  margin-bottom: 8px;
-  color: #888;
-}
-
-.input-group input, 
-.input-group textarea {
+/* ===== 5. CONTACT & ABOUT (Background containment) ===== */
+.contact-wrapper, .about-page {
   width: 100%;
-  padding: 14px;
-  background: #1a1a1a;
-  border: 1px solid #333;
-  color: #fff;
-  border-radius: 8px;
-  font-family: inherit;
+  overflow: hidden;
 }
 
-.input-group input:focus, 
-.input-group textarea:focus {
-  outline: none;
-  border-color: #fff;
-}
-
-.submit-button {
-  width: 100%;
-  padding: 16px;
-  background: #fff;
-  color: #000;
-  border: none;
-  border-radius: 8px;
-  font-weight: 700;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  transition: transform 0.2s ease;
-}
-
-.submit-button:hover {
-  transform: translateY(-2px);
-  background: #f0f0f0;
-}
-
-/* --- Responsive Desktop Layout --- */
-@media (min-width: 992px) {
-  .contact-content {
-    flex-direction: row; /* Side-by-side on desktop */
-    align-items: center;
-  }
-
-  .contact-info-side {
-    flex: 1.2;
-  }
-
-  .form-card {
-    flex: 1;
-  }
-}
-/* --- End of Contact Section Styles --- */
-
-
-/*
-   ABOUT PAGE STYLES
-   */
-
-.about-page {
-  /* Using a gradient overlay to ensure text readability */
-  background: linear-gradient(rgba(11, 22, 34, 0.8), rgba(11, 22, 34, 0.8)), 
-              url("../assets/about.jpg"); 
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Optional: creates a parallax effect */
-  background-repeat: no-repeat;
-  color: #ffffff;
-  min-height: 100vh;
-}
-
-/* INTRO */
-.about-intro {
-  padding: 100px 20px 60px;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.about-intro h1 {
-  font-size: clamp(2.4rem, 5vw, 3rem);
-  margin-bottom: 16px;
-}
-
-
-.about-description {
-  color: #cfd8e3;
-  line-height: 1.8;
-  font-size: 1.05rem;
-}
-
-/* VALUES */
-.about-values {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto 80px;
+.contact-content, .about-container {
+  max-width: 100%; /* Prevent container from over-stretching */
   padding: 0 20px;
 }
 
-.value-card {
-  background: transparent;
-  border: 1px solid #fcfcff;
-  border-radius: 12px;
-  padding: 30px;
-  text-align: center;
-}
+/* ===== 6. MOBILE RESPONSIVENESS (Final Sway Prevention) ===== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001;
+  }
 
-.value-card h3 {
-  color: #ffffff;
-  margin-bottom: 12px;
-}
+  .nav-links {
+    position: fixed;
+    top: 120px; 
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-color: #1F3B54; 
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: hidden; /* Hide completely when closed */
+  }
 
-.value-card p {
-  color: #cfd8e3;
-  line-height: 1.6;
-}
+  .nav-links.mobile-open {
+    left: 0;
+    visibility: visible;
+  }
 
-/* 
-   CLIENT SECTION
-   */
+  .hero-text {
+    margin-left: 0; /* REMOVED negative margin which caused sway */
+    text-align: center;
+  }
 
-.client-section {
-  padding: 80px 20px;
-  background-color: transparent; /* Changed from #0b1622 to see the background */
-  text-align: center;
-}
+  .logo {
+    height: 70px;
+  }
 
-.section-title {
-  color: white;
-  margin-bottom: 40px;
-}
-
-.logo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 24px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.logo-card {
-  aspect-ratio: 1 / 1;
-  background-color: hsl(0, 0%, 0%);
-  border: 2px solid #f7f7f7;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.logo-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(78, 98, 243, 0.557);
-}
-
-.client-logo {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.clients-note {
-  margin-top: 30px;
-  color: #cfd8e3;
-  font-size: 0.95rem;
-}
-
-
-.welcome-text {
-  display: inline-block;
-  font-size: 0.8rem;
-  letter-spacing: 0.5em;
-  opacity: 0.7;
-  margin-bottom: 16px;
+  /* Force single column for logos on mobile */
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
 }
