@@ -20,6 +20,7 @@ const Services = () => {
             <div className="square-box">
               <h3>Web Hosting & Domain Registration</h3>
               <br></br>
+              <br></br>
               <p>Secure, high-performance hosting solutions with guaranteed uptime and scalability for your business growth.
                 Fast and reliable domain registration with full DNS management and dedicated technical support
               </p>
@@ -28,11 +29,13 @@ const Services = () => {
             <div className="square-box">
               <h3>Web Development</h3>
               <br></br>
+              <br></br>
               <p>Custom-built websites and web applications using modern, future-ready technologies tailored to your needs.</p>
             </div>
 
             <div className="square-box">
               <h3>APP Development</h3>
+              <br></br>
               <br></br>
               <p>We build custom mobile applications for iOS and Android platforms, designed to deliver seamless user experiences and robust functionality.</p>
             </div>
@@ -40,17 +43,20 @@ const Services = () => {
             <div className="square-box">
               <h3>Source Code Licensing</h3>
               <br></br>
+              <br></br>
               <p>Secure and compliant licensing solutions tailored to your specific software and IP requirements.</p>
             </div>
 
             <div className="square-box">
               <h3>Indexing</h3>
               <br></br>
+              <br></br>
               <p>Search engine indexing and optimization to improve visibility and online discoverability across platforms.</p>
             </div>
 
             <div className="square-box">
               <h3>Web Maintenance</h3>
+              <br></br>
               <br></br>
               <p>Ongoing updates, security monitoring, backups and performance optimization to keep your site running smoothly.</p>
             </div>
