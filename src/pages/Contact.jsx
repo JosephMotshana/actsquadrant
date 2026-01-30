@@ -15,11 +15,8 @@ const Contact = () => {
           <div className="contact-info-side">
             <h1 className="contact-title">Ready to Transform Your Life?</h1>
             <br></br>
-            <br></br>
-            <br></br>
             <p className="contact-subtitle">
-              Join us and other entrepreneurs as we build a better tech-driven future together.
-            </p>
+              Join us on our mission to create a better, tech-driven world</p>
             <br></br>
             <br></br>
             <div className="contact-details-list">

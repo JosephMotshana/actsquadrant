@@ -65,12 +65,6 @@
   transition: color 0.2s ease;
 }
 
-
-
-
-
-
-
 .nav-links a:hover {
   color: #4da3ff;      /* Lighter blue for better visibility on dark bg */
 }
@@ -364,6 +358,19 @@ display: flex;
     aspect-ratio: 1 / 1;
   }
 }
+@media (max-width: 768px) {
+  /* This targets the overlay specifically in the services section */
+  .services-section .content-overlay {
+    padding-top: 140px; /* Reduced from 180px */
+    padding-bottom: 40px; /* Optional: tightens the bottom too */
+  }
+
+  /* If you have a specific header inside the services, reduce its margin too */
+  .services-header h2 {
+    margin-top: 20px; 
+    padding-bottom: 30px; /* Reduced from 80px */
+  }
+}
 
 /* Rest of your header and text styles... */
 /* --- Contact Section Styles --- */
@@ -517,7 +524,20 @@ display: flex;
 }
 
 /* --- Responsive Desktop Layout --- */
-@media (min-width: 992px) {
+@media (max-width: 768px) {
+  .contact-content {
+    display: flex;
+    flex-direction: column; /* Stack them */
+  }
+
+  .form-card {
+    order: 1; /* Appears first */
+  }
+
+  .contact-info-side {
+    order: 2; /* Appears second */
+  }
+}  @media (min-width: 992px) {
   .contact-content {
     flex-direction: row; /* Side-by-side on desktop */
     align-items: center;
@@ -658,3 +678,4 @@ display: flex;
   opacity: 0.7;
   margin-bottom: 16px;
 }
+
