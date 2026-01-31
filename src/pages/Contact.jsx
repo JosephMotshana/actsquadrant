@@ -21,17 +21,17 @@ const Contact = () => {
             <br></br>
             <div className="contact-details-list">
               <div className="detail-item">
-                <div className="icon-box"><a href="mailto:josephmotshana137@gmail.com">✉️</a></div>
-                <a href="mailto:josephmotshana137@gmail.com" className="contact-link">josephmotshana137@gmail.com</a>
+                <div className="icon-box"><a href="mailto:josep@actsquadrant.com">✉️</a></div>
+                <a href="mailto:josephmotshana137@gmail.com" className="contact-link">joseph@actsquadrant.com</a>
               </div>
               <br></br>
               <div className="detail-item">
-                <div className="icon-box"><a href="tel:+27842207128">📞</a></div>
-                <a href="tel:+27842207128" className="contact-link">+27 84 220 7128</a>
+                <div className="icon-box"><a href="tel:+27715903655">📞</a></div>
+                <a href="tel:+27842207128" className="contact-link">+27 71 590 3655</a>
               </div>
               <br></br>
               <div className="detail-item">
-                <div className="icon-box"><a href="https://x.com/your_handle" target="_blank" rel="noopener noreferrer">𝕏</a></div>
+                <div className="icon-box"><a href="https://x.com/Acts_quadrant" target="_blank" rel="noopener noreferrer">𝕏</a></div>
                 <a href="https://x.com/your_handle" target="_blank" rel="noopener noreferrer" className="contact-link">X (Twitter)</a>
               </div>
               <br></br>
