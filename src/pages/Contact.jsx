@@ -32,7 +32,7 @@ const Contact = () => {
               <br></br>
               <div className="detail-item">
                 <div className="icon-box"><a href="https://x.com/Acts_quadrant" target="_blank" rel="noopener noreferrer">𝕏</a></div>
-                <a href="https://x.com/your_handle" target="_blank" rel="noopener noreferrer" className="contact-link">X (Twitter)</a>
+                <a href="https://x.com/Acts_quadrant" target="_blank" rel="noopener noreferrer" className="contact-link">X (Twitter)</a>
               </div>
               <br></br>
               <div className="detail-item">
