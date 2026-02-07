@@ -66,7 +66,7 @@ const Services = () => {
               <br></br>
               <p>We help businesses make better decisions by turning data into clear, actionable insights through dashboards, reports and performance analysis.</p>
             </div>
-            <div className="square-box">
+            {/* <div className="square-box">
               <h3>Cloud Computing</h3>
               <br></br>
               <br></br>
@@ -89,7 +89,7 @@ const Services = () => {
               <br></br>
               <br></br>
               <p>We help businesses adopt the right technology plan for growth and build future-ready systems aligned with long-term goals.</p>
-            </div>
+            </div> */}
           </div>
             
           <div className="cta-wrapper">
