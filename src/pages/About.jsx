@@ -20,6 +20,11 @@ const About = () => {
 
   return (
     <section className="about-page" style={backgroundStyle}>
+      {/* --- INVISIBLE SEO SECTION --- */}
+      <title>About ACTS Quadrant | Tech Solutions & Digital Transformation</title>
+      <meta name="description" content="Discover ACTS Quadrant, a Fourways South Africa-based technology company building modern, accessible, and scalable digital solutions for SMEs,MNCs and startups." />
+      <meta name="keywords" content="About ACTS Quadrant, Digital Transformation South Africa, Modern Tech Solutions, Accessible Software Development Consultants" />
+      {/* ------------------------------ */}
       {/* ABOUT INTRO */}
       <div className="about-intro">
         <br /><br />

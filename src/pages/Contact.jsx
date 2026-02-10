@@ -8,6 +8,11 @@ const Contact = () => {
       id="contact" 
       style={{ backgroundImage: `url(${contactsBg})` }}
     >
+      {/* --- INVISIBLE SEO SECTION --- */}
+      <title>Contact ACTS Quadrant | Software Solutions in South Africa</title>
+      <meta name="description" content="Get in touch with ACTS Quadrant for web design,Mobile App application, software development, and hosting inquiries. Based in South Africa, serving global clients." />
+      <meta name="keywords" content="Contact ACTS Quadrant, Web Design Inquiry, Software Development South Africa,Digital Solutions, Tech Support" />
+      {/* ------------------------------ */}
       <div className="contact-overlay">
         <div className="contact-content">
           

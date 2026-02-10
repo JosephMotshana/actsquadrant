@@ -7,7 +7,11 @@ const Services = () => {
     <section 
       className="services-section" 
       style={{ backgroundImage: `url(${servicesBg})` }}
-    >
+    >{/* --- INVISIBLE SEO SECTION --- */}
+      <title>Software Development, Hosting & App Development | ACTS Quadrant</title>
+      <meta name="description" content="Explore ACTS Quadrant's digital services: Web Development, App Development, Managed Hosting, Data Analytics, and SEO Indexing in South Africa." />
+      <meta name="keywords" content="App Development, Web Hosting Fourways South Africa, Data Analytics, Source Code Licensing, Website Maintenance" />
+      {/* ------------------------------ */}
       <div className="content-overlay">
         <div className="services-container">
           <div className="services-header">
