@@ -7,7 +7,7 @@ const Home = () => {
     <section className="hero">
       {/* --- INVISIBLE SEO SECTION --- */}
       <title>Software Development Company in Fourways South Africa  | ACTS Quadrant</title>
-      <meta name="description" content="ACTS Quadrant builds futuristic, scalable, and secure digital solutions for SMEs and startups in South Africa." />
+      <meta name="description" content="ACTS Quadrant builds futuristic, scalable, and secure digital solutions for MNCs, SMEs and startups in South Africa." />
       <meta name="keywords" content="Web Design, Software Development, ACTS Quadrant, Digital Solutions" />
       {/* ------------------------------ */}
 
