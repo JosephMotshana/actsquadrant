@@ -679,187 +679,165 @@ display: flex;
   margin-bottom: 16px;
 }
 
-/* --- Base Variables --- */
-:root {
-  --footer-bg: #111827; /* Dark grayish blue */
-  --footer-text: #9ca3af; /* Light gray */
-  --footer-heading: #f9fafb; /* Off-white */
-  --footer-highlight: #3b82f6; /* Bright blue for accents */
-  --footer-highlight-hover: #60a5fa;
-  --footer-border: #374151; /* Dark border color */
-}
-
-/* --- Main Footer Container --- */
+/* ===== FOOTER STYLES ===== */
 .footer {
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
-  padding: 4rem 2rem 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #0a1a24; /* Darker navy from your hero section */
+  color: #ffffff;
+  padding: 80px 0 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: 'Inter', sans-serif;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 24px 60px 24px;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 3rem;
-  padding-bottom: 3rem;
+  grid-template-columns: 1.5fr 1fr 1fr; /* Proportional spacing */
+  gap: 60px;
 }
 
-/* --- Brand & Mission --- */
-.footer-brand p {
-  line-height: 1.6;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  max-width: 300px;
-}
-
-.footer-logo {
-  font-size: 1.75rem;
+/* Branding Section */
+.footer-brand .footer-logo {
+  font-size: 1.8rem;
   font-weight: 700;
-  color: var(--footer-heading);
-  margin: 0;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
 }
 
-.highlight {
-  color: var(--footer-highlight);
+.footer-brand .highlight {
+  color: #4da3ff; /* Matching your navbar hover color */
+}
+
+.footer-brand p {
+  color: #9fb6c3;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  max-width: 320px;
 }
 
 .social-links {
   display: flex;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .social-links a {
-  color: var(--footer-text);
-  transition: color 0.3s ease;
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  width: 40px;
+  height: 40px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;      /* Centers the icon */
+  justify-content: center;   /* Centers the icon */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .social-links a:hover {
-  color: var(--footer-highlight);
+  background: #4da3ff;
+  transform: translateY(-3px);
+  border-color: #4da3ff;
 }
 
-/* --- Navigation & Sections --- */
+/* Link Columns */
 .footer-section h3 {
-  color: var(--footer-heading);
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
-  margin-top: 0;
+  margin-bottom: 25px;
+  position: relative;
 }
 
-.footer-links,
-.footer-contact {
+.footer-links, .footer-contact {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer-links li {
-  margin-bottom: 0.75rem;
-}
-
-.footer-links a {
-  color: var(--footer-text);
-  text-decoration: none;
-  transition: color 0.3s ease, padding-left 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: var(--footer-highlight);
-  padding-left: 5px; /* Subtle right shift on hover */
-}
-
-/* --- Contact Information --- */
-.footer-contact li {
+.footer-links li, .footer-contact li {
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+  gap: 10px;
 }
 
-.footer-contact a {
-  color: var(--footer-text);
+.footer-links a, .footer-contact a {
+  color: #cfd8e3;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
 
-.footer-contact a:hover {
-  color: var(--footer-highlight);
+.footer-links a:hover, .footer-contact a:hover {
+  color: #4da3ff;
 }
 
-/* --- Footer Bottom Bar --- */
+.footer-contact .highlight {
+  color: #4da3ff;
+}
+
+/* Bottom Bar */
 .footer-bottom {
-  border-top: 1px solid var(--footer-border);
-  padding: 1.5rem 0;
+  background-color: #061118; /* Slightly darker than footer bg */
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-bottom-content {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 24px;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  font-size: 0.875rem;
-}
-
-.footer-bottom-content p {
-  margin: 0;
-}
-
-.hero-btn {
-  background-color: transparent;
-  color: var(--footer-heading);
-  border: 1px solid var(--footer-border);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.hero-btn:hover {
-  background-color: var(--footer-highlight);
-  border-color: var(--footer-highlight);
-  color: #fff;
-}
-
-.footer-legal {
-  display: flex;
   align-items: center;
-  gap: 0.75rem;
 }
 
-.footer-legal a {
-  color: var(--footer-text);
-  text-decoration: none;
-  transition: color 0.3s ease;
+.footer-bottom p {
+  color: #64748b;
+  font-size: 0.85rem;
 }
 
-.footer-legal a:hover {
-  color: var(--footer-highlight);
+/* Styling the "Powered By" button to match your Hero CTA */
+.footer-bottom .hero-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.8rem;
 }
 
-.divider {
-  color: var(--footer-border);
-}
-
-/* --- Mobile Responsiveness --- */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE FOOTER ===== */
+@media (max-width: 992px) {
   .footer-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr; /* Stack into two columns */
   }
-
-  .footer-bottom-content {
-    flex-direction: column;
+  .footer-brand {
+    grid-column: span 2;
     text-align: center;
+  }
+  .footer-brand p {
+    margin: 0 auto 24px;
+  }
+  .social-links {
     justify-content: center;
   }
 }
 
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Full stack on mobile */
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .footer-brand {
+    grid-column: span 1;
+  }
+
+  .footer-links li, .footer-contact li {
+    justify-content: center;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
